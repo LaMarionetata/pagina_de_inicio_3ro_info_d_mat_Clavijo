@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WashLink - Lavadero & Detailing de Carros Premium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="fade-wrapper">
+        
+        <!-- ENCABEZADO / NAVBAR -->
+        <header class="navbar">
+            <div class="logo-container">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" fill="#1F1F1F"/>
+                </svg>
+                <span class="logo-text">WashLink*</span>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="#inicio" class="nav-link">Inicio</a>
+                <a href="#servicios" class="nav-link">Servicios</a>
+                <a href="#videos" class="nav-link">Galería</a>
+                <a href="#logros" class="nav-link">Logro</a>
+                <a href="#personal" class="nav-link">Personal</a>
+            </nav>
+
+            <div class="auth-actions">
+                <button class="btn btn-login">Mi cuenta</button>
+                <button class="btn btn-signup" id="navReservaBtn">Agendar cita</button>
+            </div>
+
+            <button class="hamburger-menu" id="hamburgerBtn" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+        <!-- SECCIÓN HÉROE (INICIO) -->
+        <main class="main-content" id="inicio">
+            
+            <section class="col-left">
+                <!-- Stickers Flotantes -->
+                <div class="sticker dynamic-sticker-1">✨</div>
+                <div class="sticker dynamic-sticker-2">🏎️</div>
+                <div class="sticker dynamic-sticker-3">🫧</div>
+                <div class="sticker dynamic-sticker-4">💦</div>
+                <div class="sticker dynamic-sticker-5">🚙</div>
+
+                <h1 class="main-title">El brillo perfecto para tu auto, rápido y fácil.</h1>
+                <p class="description-text">
+                    Reserva tu turno en segundos, elige entre nuestros paquetes de spa automotriz y mantén tu vehículo impecable con tecnología de punta.
+                </p>
+
+                <div class="cta-form">
+                    <div class="input-wrapper">
+                        <span class="url-prefix">reserva.com/</span>
+                        <input type="text" class="url-input" id="placaInput" placeholder="TU-PLACA">
+                    </div>
+                    <button class="btn-cta" id="btnReservar">Reservar ahora</button>
+                </div>
+            </section>
+
+            <section class="col-right">
+                <div class="advertising-card">
+                    <div class="image-wrapper">
+                        <!-- Imagen principal del lavadero -->
+                        <img src="archivo.webp" alt="Auto recién lavado" class="promo-image">
+                    </div>
+                    <p class="image-caption">Servicio Premium • Cuidado de nivel profesional para tu carro</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- SECCIÓN DE VIDEOS INTERACTIVOS (CON TRANSICIÓN) -->
+        <section id="videos" class="videos-section">
+            <div class="section-header white-text">
+                <span class="section-badge">En Acción 🎥</span>
+                <h2 class="section-title">Resultados que se ven y se sienten</h2>
+                <p class="section-subtitle">Explora el proceso de transformación de los autos en nuestras instalaciones.</p>
+            </div>
+
+            <div class="video-gallery-wrapper">
+                <!-- Visor de Video Principal (Sin loop para avance automático) -->
+                <div class="main-video-container">
+                    <video id="mainVideoPlayer" controls autoplay muted poster="poster1.jpg">
+                        <source id="videoSource" src="video2.mp4" type="video/mp4">
+                        Tu navegador no soporta videos HTML5.
+                    </video>
+                    <div class="video-info-overlay">
+                        <h3 id="videoTitle">Lavado de Espuma Activa</h3>
+                        <p id="videoDesc">Lavado Exterior</p>
+                    </div>
+                </div>
+
+                <!-- Selector de 3 Videos en Miniatura -->
+                <div class="video-thumbnails-grid">
+                    <div class="video-thumb active" 
+                         data-video="Espuma-activa.mp4" 
+                         data-title="Espuma Activa" 
+                         data-desc="Lavado Exterior">
+                        <div class="thumb-badge">01</div>
+                        <h4>Espuma Activa</h4>
+                        <p>Lavado Exterior</p>
+                    </div>
+
+                    <div class="video-thumb" 
+                         data-video="Sellado-ceramico.mp4" 
+                         data-title="Sellado Cerámico" 
+                         data-desc="Protección UV">
+                        <div class="thumb-badge">02</div>
+                        <h4>Sellado Cerámico</h4>
+                        <p>Protección UV</p>
+                    </div>
+
+                    <div class="video-thumb" 
+                         data-video="Interior-spa.mp4" 
+                         data-title="Interior Spa" 
+                         data-desc="Limpieza de Cabina">
+                        <div class="thumb-badge">03</div>
+                        <h4>Interior Spa</h4>
+                        <p>Limpieza de Cabina</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE SERVICIOS / PRODUCTOS -->
+        <section id="servicios" class="products-section">
+            <div class="section-header">
+                <span class="section-badge dark-badge">Planes & Servicios</span>
+                <h2 class="section-title">Elige el tratamiento para tu carro ✨</h2>
+                <p class="section-subtitle">Selecciona cualquiera de nuestros paquetes para ver todos los detalles o agendar tu cita.</p>
+            </div>
+
+            <div class="products-grid">
+                
+                <!-- Producto 1 (Lavado Express) -->
+                <div class="product-card" 
+                     data-id="1" 
+                     data-title="Lavado Express" 
+                     data-price="$15.00" 
+                     data-time="25 mins"
+                     data-img="lavado-express.jpg"
+                     data-desc="Ideal para mantener la limpieza semanal. Incluye lavado exterior con shampoo neutro, secado con microfibra de alta densidad, aspirado exprés de tapetes y abrillantador de llantas con efecto mate.">
+                    
+                    <span class="card-badge">Más Rápido</span>
+                    <div class="product-img-box">
+                        <img src="lavado-express.jpg" alt="Lavado Express" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Lavado Express</h3>
+                        <p class="product-short-desc">Limpieza exterior rápida y efectiva con secado técnico de microfibra.</p>
+                    </div>
+                    <div class="product-price-wrapper">
+                        <span class="price">$15.00</span>
+                        <button class="btn-card-action">Ver más</button>
+                    </div>
+                </div>
+
+                <!-- Producto 2 (Destacado) -->
+                <div class="product-card featured" 
+                     data-id="2" 
+                     data-title="Detallado Pro-Shine" 
+                     data-price="$35.00" 
+                     data-time="1 hora"
+                     data-img="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=800&q=80"
+                     data-desc="Nuestro servicio estrella. Incluye lavado profundo de carrocería y rines, descontaminado ligero, cera sintética de alto brillo, aspirado detallado de alfombras, restauración de plásticos del tablero y acondicionamiento interior.">
+                    
+                    <span class="card-badge popular">Popular ★</span>
+                    <div class="product-img-box">
+                        <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=800&q=80" alt="Detallado Pro-Shine" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Detallado Pro-Shine</h3>
+                        <p class="product-short-desc">Brillo espejo, encerado protector y aspirado detallado de interiores.</p>
+                    </div>
+                    <div class="product-price-wrapper">
+                        <span class="price">$35.00</span>
+                        <button class="btn-card-action">Ver más</button>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="product-card" 
+                     data-id="3" 
+                     data-title="Protección Cerámica" 
+                     data-price="$85.00" 
+                     data-time="3 horas"
+                     data-img="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=800&q=80"
+                     data-desc="Tratamiento de alta gama para coleccionistas y apasionados. Incluye corrección de pintura (1 paso), aplicación de sellador cerámico nanotecnológico con protección de 6 a 12 meses, lavado de motor a vapor y cristalizado de parabrisas.">
+                    
+                    <span class="card-badge">Premium</span>
+                    <div class="product-img-box">
+                        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=800&q=80" alt="Protección Cerámica" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Protección Cerámica</h3>
+                        <p class="product-short-desc">Corrección de micro-rayones y recubrimiento hidrofóbico cerámico.</p>
+                    </div>
+                    <div class="product-price-wrapper">
+                        <span class="price">$85.00</span>
+                        <button class="btn-card-action">Ver más</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE LOGROS -->
+        <section id="logros" class="logros-section">
+            <div class="section-header">
+                <span class="section-badge">Trayectoria</span>
+                <h2 class="section-title">Nuestros Logros & Métricas 🏆</h2>
+                <p class="section-subtitle">La confianza de nuestros clientes es nuestro mayor orgullo.</p>
+            </div>
+
+            <div class="logros-grid">
+                <div class="logro-card">
+                    <span class="logro-number">+12,500</span>
+                    <p class="logro-text">Carros Atendidos</p>
+                </div>
+                <div class="logro-card">
+                    <span class="logro-number">99.4%</span>
+                    <p class="logro-text">Satisfacción Garantizada</p>
+                </div>
+                <div class="logro-card">
+                    <span class="logro-number">100%</span>
+                    <p class="logro-text">Productos Biodegradables</p>
+                </div>
+                <div class="logro-card">
+                    <span class="logro-number">10+</span>
+                    <p class="logro-text">Años de Experiencia</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE PERSONAL -->
+        <section id="personal" class="personal-section">
+            <div class="section-header">
+                <span class="section-badge dark-badge">Equipo Experto</span>
+                <h2 class="section-title">Especialistas al cuidado de tu auto 👨‍🔧</h2>
+                <p class="section-subtitle">Técnicos certificados apasionados por el detalle automotriz.</p>
+            </div>
+
+            <div class="personal-grid">
+                <div class="team-card">
+                    <div class="team-avatar-wrapper">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" alt="Carlos R." class="team-avatar">
+                    </div>
+                    <h3>Carlos Rodríguez</h3>
+                    <span class="team-role">Master Detailer Cerámico</span>
+                    <p class="team-bio">Especialista en corrección de pintura y nano-recubrimientos con más de 8 años en la industria.</p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-avatar-wrapper">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Sofía M." class="team-avatar">
+                    </div>
+                    <h3>Sofía Mendoza</h3>
+                    <span class="team-role">Especialista en Interiores</span>
+                    <p class="team-bio">Experta en restauración de cuero, lavado de tapicería y desinfección integral con ozono.</p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-avatar-wrapper">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80" alt="Mateo V." class="team-avatar">
+                    </div>
+                    <h3>Mateo Vargas</h3>
+                    <span class="team-role">Supervisor de Control de Calidad</span>
+                    <p class="team-bio">Encargado de inspeccionar minuciosamente cada vehículo antes de su entrega al cliente.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PIE DE PÁGINA (FOOTER ESTILO LINKTREE) -->
+        <footer class="footer-section">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">WashLink*</span>
+                    <p>El estándar más alto en lavado y estética automotriz.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#servicios">Servicios</a>
+                    <a href="#videos">Galería</a>
+                    <a href="#logros">Logro</a>
+                    <a href="#personal">Personal</a>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <p class="copyright">© 2026 WashLink Inc. Todos los derechos reservados.</p>
+        </footer>
+
+    </div>
+
+    <!-- VENTANA EMERGENTE (MODAL DETALLADO) -->
+    <div class="modal-backdrop" id="productModal">
+        <div class="modal-content">
+            <button class="modal-close-btn" id="closeModal">&times;</button>
+            
+            <div class="modal-image-box">
+                <img src="" id="modalImg" alt="Imagen del servicio" class="modal-img">
+            </div>
+
+            <div class="modal-body-content">
+                <span class="modal-badge" id="modalBadge">Servicio</span>
+                <h2 class="modal-title" id="modalTitle">Título del Servicio</h2>
+                
+                <div class="modal-meta">
+                    <span class="modal-price" id="modalPrice">$0.00</span>
+                    <span class="modal-time" id="modalTime">⏱ 0 mins</span>
+                </div>
+                
+                <hr class="modal-divider">
+                <p class="modal-description" id="modalDescription">Descripción detallada...</p>
+                <button class="btn-modal-confirm" id="confirmProductBtn">Seleccionar y agendar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
